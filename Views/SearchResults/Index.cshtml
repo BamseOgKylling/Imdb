@@ -1,0 +1,13 @@
+﻿@model IEnumerable<Imdb.Models.Domain.Movie>
+ 
+    
+    
+@{
+var q = ViewData["SearchString"];
+}
+
+
+<h1 class="text-center mb-2">Results for "@q"</h1>
+
+
+<partial name="_TopPicks" />

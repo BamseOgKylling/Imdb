@@ -1,0 +1,37 @@
+﻿@model Imdb.Models.Domain.Movie
+
+
+@if (Model != null)
+{
+    <div class="row mb-1">
+        <div class="d-flex justify-content-between fs-2">
+            <div>@Model.Title</div>
+            <div>
+                <i class="bi bi-star-fill"> @Model.Rating</i>
+            </div>
+        </div>
+    </div>
+
+    <div class="row mb-1">
+        <div class="year">@Model.Genre.Name, @Model.ReleaseYear</div>
+    </div>
+
+    <div class="row mb-3">
+        <div class="col-4">
+            <img src="@Model.UrlImage" class="w-100" />
+        </div>
+        <div class="col-8 embed-responsive embed-responsive-16by9">
+
+            <video width="720" height="405" controls>
+                <source src="@Model.Trailer" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+
+        </div>
+    </div>
+
+    <div class="row col-6">
+        <div>@Model.Description</div>
+        <div><br> </br></div>
+    </div>
+}

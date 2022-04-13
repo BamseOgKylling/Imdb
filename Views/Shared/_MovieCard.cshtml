@@ -1,0 +1,22 @@
+﻿@model Imdb.Models.Domain.Movie
+
+
+
+<div class="mb-3">
+    <a href="/movies/@Model.UrlSlug" style="color: black; text-decoration: none;">
+        <img src="@Model.UrlImage"
+             alt=""
+             class="mb-2 w-100" />
+        <div class="row mb-1">
+            <div class="rating col">
+                <i class="bi bi-star-fill"> @Model.Rating</i>
+            </div>
+        </div>
+        <div class="row mb-1">
+            <div class="name col">@Model.Title</div>
+        </div>
+        <div class="row mb-1">
+            <div class="year col">@Model.ReleaseYear</div>
+        </div>
+    </a>
+</div>

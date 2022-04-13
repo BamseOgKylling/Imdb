@@ -1,0 +1,10 @@
+﻿@model IEnumerable<Imdb.Models.Domain.Movie>
+
+
+
+<div class="row row-cols-5 align-items-end gy-5">
+    @foreach (var movie in Model)
+    {
+        <partial name="_MovieCard" model="movie" />
+    }
+</div>
